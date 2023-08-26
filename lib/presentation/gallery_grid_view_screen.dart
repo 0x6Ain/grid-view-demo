@@ -30,7 +30,9 @@ class _GalleryGridViewScreenState extends ConsumerState<GalleryGridViewScreen> {
 
     // Check if the current scroll position is at or beyond position
     if (_scrollController.position.pixels >= maxScrollExtent) {
-      ref.read(galleryRepositoryProvider).fetchMoreData();
+      if (ref.read(galleryChangesProvider).value?.status != Status.loading) {
+        ref.read(galleryRepositoryProvider).fetchMoreData();
+      }
     }
   }
 
@@ -64,6 +66,7 @@ class _GalleryGridViewScreenState extends ConsumerState<GalleryGridViewScreen> {
             return Stack(
               children: [
                 Scrollbar(
+                  controller: _scrollController,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: galleyItems.items.isEmpty
