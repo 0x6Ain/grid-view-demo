@@ -1,17 +1,15 @@
 # grid_view_demo
 
-A new Flutter project.
+A new Flutter grid view demo project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Flutter grid view demo application.
 
-A few resources to get you started if this is your first Flutter project:
+### Build
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. In terminal, run `flutter pub get . ` to fetch packages needed.
+2. run `flutter pub run build_runner build --delete-conflicting-outputs`.
+3. Make .env file and Update your own config like .env.sample
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # grid-view-demo
